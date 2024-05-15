@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="todo">
+            <div class="container">
+                <div class="todo-header">
+                    <a href="#" class="todo-header__logo">Todo</a>
+                    <button class="todo-header__add">
+                        <img src="images/plus.svg" alt="plus">
+                    </button>
+                    <div id="task-modal" class="modal">
+                        <div class="modal-content">
+                            <h2 class="modal-content__title">Task</h2>
+                            <form id="task-form">
+                                <div class="task-form__field">
+                                    <label for="task-title">Tittle:</label>
+                                    <input type="text" id="task-title" required>
+                                </div>
+                                <div class="task-form__field">
+                                    <label for="task-description">Description:</label>
+                                    <textarea id="task-description" required></textarea>
+                                </div>
+                                <div class="task-form__buttons">
+                                    <button class="close-btn" type="reset"><img src="images/cross.svg"
+                                            alt="cancel"></button>
+                                    <button type="submit"><img src="images/check-mark.svg" alt="check mark"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo-content">
+                    <div class="todo-content__sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu__item">
+                                <button class="btn--purple active" data-category-name="work">work</button>
+                            </li>
+                            <li class="sidebar-menu__item">
+                                <button class="btn--blue" data-category-name="study">study</button>
+                            </li>
+                            <li class="sidebar-menu__item">
+                                <button class="btn--red" data-category-name="entertainment">entertainment</button>
+                            </li>
+                            <li class="sidebar-menu__item">
+                                <button class="btn--green" data-category-name="family">family</button>
+                            </li>
+                        </ul>
+                        <div class="sidebar-checkbox">
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="hide-done">
+                                <label for="hide-done">Hide done task</label>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="todo-content__tasks">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap");
+
+.container {
+  max-width: 1176px;
+  width: 100%;
+  padding-inline: 20px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 15px;
+  color: #000;
+  background-color: #000;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  font-family: "Pacifico", cursive;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.custom-checkbox + label::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  margin-right: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
+  background-color: #fff;
+}
+
+.custom-checkbox:checked + label::before {
+  content: "X";
+  color: #000;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todo {
+  max-width: 1406px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 105px 0 127px;
+}
+
+.todo-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 125px;
+}
+
+.todo-header__logo {
+  font-family: "Pacifico", cursive;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #808080;
+}
+
+.todo-content {
+  display: flex;
+  gap: 50px;
+}
+
+.todo-content__sidebar {
+  width: 25%;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 45px;
+}
+
+.sidebar-menu__item {
+  color: #808080;
+  font-size: 30px;
+}
+
+.sidebar-menu__item button {
+  position: relative;
+  padding-left: 69px;
+}
+.sidebar-menu__item button.active {
+  color: #000;
+}
+
+.sidebar-menu__item button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  left: 0;
+  background-color: #000;
+}
+
+.sidebar-checkbox .custom-checkbox + label {
+  font-size: 20px;
+  color: #808080;
+}
+
+.sidebar-checkbox .custom-checkbox + label::before {
+  font-size: 15px;
+  margin-right: 30px;
+}
+
+.sidebar-menu__item .btn--purple::before {
+  background-color: #b7b1dd;
+}
+.sidebar-menu__item .btn--blue::before {
+  background-color: #81dcf0;
+}
+.sidebar-menu__item .btn--red::before {
+  background-color: #f8abab;
+}
+.sidebar-menu__item .btn--green::before {
+  background-color: #90f3d0;
+}
+
+.todo-content__tasks {
+  display: grid;
+  grid-template-columns: minmax(0, 379px) minmax(0, 379px);
+  row-gap: 25px;
+  column-gap: 35px;
+  width: 75%;
+  height: 400px;
+  overflow-y: auto;
+  grid-auto-rows: min-content;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 14px 24px;
+  background-color: #fff9de;
+  border-radius: 10px;
+}
+
+.task-item__title {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.task-item__description {
+  color: #595959;
+}
+
+.task-item .task-item__checkbox {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  right: 46px;
+  top: 100%;
+  background-color: #d9d9d9;
+  max-width: 489px;
+  width: 100%;
+}
+
+.modal-content {
+  padding: 16px 0 8px;
+}
+
+
+.modal-content__title {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+#task-form {
+  padding-inline: 7px 49px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-form__field {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.task-form__field label {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.task-form__field input, .task-form__field textarea {
+  background-color: #fff;
+  padding: 8px 10px;
+  flex: 0 1 294px;
+  outline: none;
+}
+.task-form__field input {
+  font-size: 20px;
+}
+.task-form__field textarea {
+  background-color: #fff;
+  resize: none;
+  height: 118px;
+  font-size: 15px;
+  color: #595959;
+}
+.task-form__buttons {
+  align-self: flex-end;
+  display: flex;
+  gap: 23px;
+}
